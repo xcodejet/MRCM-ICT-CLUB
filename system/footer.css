@@ -1,0 +1,42 @@
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(179, 23, 23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-1 {
+}
+.footer-2 {
+    display: flex;
+    flex-direction: row;
+}
+.footer-col-1 {
+    width: 200px;
+    color: rgb(255, 255, 255);
+}
+.footer-col-1 ul li {
+    list-style: none;
+    padding: 10px 30px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/5249/5249095.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    font-family: "Asap", sans-serif;
+}
+.footer-col-1 ul li a {
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contact-img {
+    width: 40px;
+}

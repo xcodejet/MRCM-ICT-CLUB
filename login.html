@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./login/login.css">
+    <link rel="stylesheet" href="./system/head.css">
+    <link rel='stylesheet' href='./system/footer.css'>
+    <link rel='stylesheet' href='./system/body.css'>
+    <title>Document</title>
+</head>
+<body class="slideshow">
+<div>
+    <div class="navigation-bar">
+        <img class="mrcict-img" src="MRCICT.png">
+        <div class="navigation-buttons-desktop">
+          <a href="http://htmlpreview.github.io/?https://github.com/xcodejet/MRCM-ICT-CLUB/blob/main/index.html" class="head-btn"><i class='fa fa-home'></i>&nbsp; home</a>
+          <a class="head-btn" href="gallery.html"><i class="fa fa-book"></i>&nbsp; gallery</a>
+          <a class="head-btn"><i class="fa fa-navicon"></i>&nbsp; about</a>
+          <a class="head-btn"><i class='fa fa-comment'></i>&nbsp; contact</a>
+      </div>
+      <div class="navigation-buttons-mobile">
+        <a href="http://htmlpreview.github.io/?https://github.com/xcodejet/MRCM-ICT-CLUB/blob/main/index.html" class="head-btn">&nbsp;<i class='fa fa-home'></i></a>
+        <a class="head-btn" onclick="more_op()">&nbsp;<i class="fa fa-bars"></i>&nbsp;</a>
+    </div>
+    </div>
+<div class="inner-box-">
 
+<div class="register" style="display: block;">
+    <div class="registpage" align="center">
+      <br><br>
+      <p>&nbsp;</p>
+      <h1><b id="h1_topic" style="color:rgb(235, 63, 51); border-bottom: 3px solid rgb(78, 78, 78); text-shadow: 00 2px 5px black; font-family: Arial, Helvetica, sans-serif;">Register to MRCM ict club</b></h1>
+      <br>
+      <div style="width: 100%; color: rgb(255, 255, 0); text-shadow: 00 2px 5px black;" align="left">
+      </div>
+      
+      <br>
+        <div class="register-box">
+          <br>
+          <br><br>
+          <div align="left" style="margin-left: 5%; width: 100%; color: rgb(241, 255, 232); font-weight: bold;" data-aos="fade-up-right">
+            <br>
+            <li class="welcome-body">Limited number of students can attend it</li>
+            <li class="welcome-body">Click the bellow [NEXT] button and access to the google form</li>
+            <li class="welcome-body">Yes, I am a student of Mahinda Rajapaksha College Matara</li>
+            <li class="welcome-body">I want to join the ICT CLUB in mrcm</li>
+            <br><br><br>
+          </div>
+          <br>
+          <div style="display: flex; flex-direction:row; width: 90%;" align="center">
+          <a href="https://script.google.com/macros/s/AKfycbzlkB6fPIpSeA9RD4THJ0PsJmjL9VrhnDeZXVjU4UDKQHA8bQS0ij84cLo3b2djYkdtcA/exec" class="submit-btn">
+            <div align="center" style="width: 100%; text-decoration: none;"><b>&nbsp; Next &nbsp;<i class='fa fa-arrow-right'></i></b></div>
+          </a>&nbsp;&nbsp;
+          <a onclick="view_members()" class="submit-btn" style="width: 200px;">
+            <div align="center" style="width: 100%; text-decoration: none;"><b>&nbsp; View Members &nbsp;<i class='fa fa-arrow-right'></i></b></div>
+          </a>
+        </div>
+          <br><br>
+        </div>
+    </div><br><br>
+  </div>
+
+  
+<!--members-->
+<div class="register" style="display: none;">
+    <div class="registpage" align="center">
+<br><br>
+      <h1><b id="h1_topic" style="color:rgb(255, 96, 85); border-bottom: 3px solid rgb(78, 78, 78); text-shadow: 00 2px 5px black;">All member and their details</b></h1>
+      <br>
+      <h2 class="wordsrow" style="color: yellow; text-shadow: 00 2px 5px rgb(0, 0, 0);"><i class='fa fa-check-circle' style="color: rgb(100, 255, 0);"></i>&nbsp; Log in to admin account to access the database</h2>
+      <br><br><Br>
+        <div class="register-box">
+          <br>
+          <a>Copyright | mrcm ict club</a>
+          <br><br>
+          <p style="width: 90%;">This action can be leak bio data of our participants.</p>
+          <p style="width: 90%;">Therefore their details are protected from others with high security.</p>
+          <p style="width: 90%;" id="error-view-members">Only admins can see the bio data !</p>
+          <input type="text" class="input" placeholder="Username">
+          <br><br>
+          <input type="text" class="input" placeholder="Password">
+          <br><br>
+          <a class="submit-btn members"><b>ACCESS</b></a>
+          <br>
+        </div>
+      <br><br>
+    </div>
+    <br><br>
+  </div>
+  
+  
+    </div>
+</div>
+    
+<script src="mrcm.js"></script>
+<script>document.getElementsByClassName('slideshow')[0].style.height = `${screen.height}px`
+
+
+//* view members page
+function view_members(){
+  document.getElementsByClassName('register')[0].style.display = "none"
+  document.getElementsByClassName('register')[1].style.display = "block"
+}
+
+
+//* view members >>
+let userName = document.getElementsByClassName('input')[0]
+let passWord = document.getElementsByClassName('input')[1]
+let login_state = 2
+document.getElementsByClassName('submit-btn members')[0].onclick = function() {
+
+  var date = new Date()
+  
+  if(login_state >= 1){
+    login_state = login_state - 1
+    if(userName.value.match(/prabhasha2006|dineth2006|gemict/g)){
+      if(passWord.value === `2006${date.getDate()}`){
+        userName.value = ""
+        passWord.value = ""
+        window.open('https://docs.google.com/spreadsheets/d/1Ar9b_d0x4hPRkN50an1l9qhG5zQMmygnWfr7POIt1v8/edit#gid=0', '_blank')
+      }else{error_un_pw()}
+    }else{error_un_pw()}
+  }else{error_un_pw_block()}
+  
+}
+function error_un_pw(){
+  document.getElementById('error-view-members').style.color = "red"
+  document.getElementById('error-view-members').innerHTML = `Error username or password ! (Retry)`
+  userName.style.border = "2px solid rgb(255, 0, 0)"
+  passWord.style.border = "2px solid rgb(255, 0, 0)"
+  userName.value = ""
+  passWord.value = ""
+}
+function error_un_pw_block(){
+  document.getElementsByClassName('submit-btn members')[0].innerHTML = ""
+  document.getElementById('error-view-members').style.color = "rgb(255, 2550, 20)"
+  document.getElementById('error-view-members').innerHTML = "Login activity suspended by the system !"
+  userName.style.border = "2px solid rgb(255, 0, 0)"
+  userName.value = "Input disabled !"
+  userName.disabled="disabled"
+  passWord.style.border = "2px solid rgb(255, 0, 0)"
+  passWord.value = "Input disabled !"
+  passWord.disabled="disabled"
+}
+</script>
+</body>
+</html>

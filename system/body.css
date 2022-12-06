@@ -1,0 +1,88 @@
+.welcome-body {
+    list-style: none;
+    padding: 10px 30px;
+    background-image: url("https://cdn-icons-png.flaticon.com/128/190/190411.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    font-family: "Asap", sans-serif;
+}
+.welcometoictclub {
+}
+@media only screen and (max-width: 600px) {
+    .welcometoictclub {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .welcometoictclub {
+        font-size: 22px;
+    }
+}
+
+
+.register-btn-home {
+    width: 200px;
+    height: 50px;
+    color: black;
+    border: 1px solid yellow;
+    border-radius: 25px;
+    /*background-color: rgb(212, 212, 212);*/
+    background-image: linear-gradient(to left, rgba(255, 255, 0, 0.747) 0%, rgba(255, 255, 255, 0) 50%, rgba(166, 255, 0, 0) 100%);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    background-size: 200% auto;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+    text-decoration: none;
+}
+.register-btn-home:hover {
+    background-position: right center;
+}
+@media only screen and (max-width: 600px) {
+    .register-btn-home {
+        width: 160px;
+    }
+}
+
+
+.welcome-div-controll {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.welcome-div-controll-all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.register-image {
+
+}
+.welcome-image {
+
+}
+@media only screen and (max-width: 1000px) {
+    .welcome-div-controll{
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome-div-controll-all {
+        margin-top: 300px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .welcome-div-controll-all {
+        margin-top: 200px;
+    }
+    .register-image {
+        height: 80%;
+        width: 90%;
+        margin-top: 500px;
+    }
+    .welcome-image {
+        height: 80%;
+        width: 80%;
+    }
+}

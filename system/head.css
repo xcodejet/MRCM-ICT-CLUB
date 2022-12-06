@@ -1,0 +1,183 @@
+.slideshow {
+    width: 100%;
+    transition: 1s;
+    background-image: url(https://wallpaperaccess.com/full/2889825.jpg);
+    background-size: cover;
+}
+.navigation-bar {
+    height: 120px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.247);
+    box-shadow: 00 2px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    float: left;
+}
+.mrcict-img {
+    height: 100px;
+    width: 20%;
+    margin-left: 20px;
+}
+.navigation-buttons-desktop {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation-buttons-mobile {
+    width: 80%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.head-btn {
+    height: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 20%;
+    transition: .5s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: -150px;
+}
+.head-btn:hover {
+    background-color: rgba(0, 0, 0, 0.384);
+    color: rgb(246, 255, 113);
+}
+@media only screen and (max-width: 1000px) {
+    .mrcict-img {
+        height: 95px;
+        width: 25%;
+        margin-left: 20px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .mrcict-img {
+        height: 90px;
+        width: 29%;
+        margin-left: 20px;
+    }
+    .navigation-buttons-desktop {
+        display: none;
+    }
+    .navigation-buttons-mobile {
+        display: flex;
+    }
+    .head-btn {
+        height: 120px;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .navigation-bar {
+        height: 90px;
+    }
+    .mrcict-img {
+        height: 70px;
+        width: 29%;
+        margin-left: 20px;
+    }
+    .navigation-buttons-desktop {
+        display: none;
+    }
+    .navigation-buttons-mobile {
+        display: flex;
+    }
+    .head-btn {
+        height: 90px;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .navigation-bar {
+        height: 90px;
+    }
+    .mrcict-img {
+        height: 60px;
+        width: 35%;
+        margin-left: 20px;
+    }
+    .navigation-buttons-desktop {
+        display: none;
+    }
+    .navigation-buttons-mobile {
+        display: flex;
+    }
+    .head-btn {
+        height: 90px;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .navigation-bar {
+        height: 90px;
+    }
+    .mrcict-img {
+        height: 50px;
+        width: 40%;
+        margin-left: 20px;
+    }
+    .navigation-buttons-desktop {
+        display: none;
+    }
+    .navigation-buttons-mobile {
+        display: flex;
+    }
+    .head-btn {
+        height: 90px;
+        width: 40%;
+    }
+}
+
+.inner-box {
+    height: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-img {
+    height: 300px;
+    width: 60%;
+}
+
+.more-op {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    display: none;
+    transition: 1s;
+    justify-content: center;
+}
+.head-btns-in {
+    height: 60px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 100%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 25px;
+}
+.head-btns {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
