@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
 .slideshow {
     width: 100%;
     transition: 1s;
@@ -14,6 +22,34 @@
     justify-content: left;
     float: left;
 }
+.navigation-scroll {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(75, 75, 75, 0.993);
+    box-shadow: 00 2px 5px black;
+    display: none;
+    align-items: center;
+    justify-content: left;
+    float: left;
+    position: fixed;
+    z-index: 2;
+}
+.navigation-scroll-btn {
+    color: black;
+    width: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-scroll-btn-a {
+    color: rgb(189, 189, 189);
+    text-decoration: none;
+}
+.navigation-scroll-btn-a:hover {
+    color: rgb(216, 176, 0);
+    text-decoration: none;
+}
 .mrcict-img {
     height: 100px;
     width: 20%;
@@ -24,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 .navigation-buttons-mobile {
     width: 80%;

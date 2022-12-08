@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 .welcome-body {
     list-style: none;
     padding: 10px 30px;
@@ -5,7 +7,7 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 20px;
-    font-family: "Asap", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .welcometoictclub {
 }
@@ -45,17 +47,23 @@
         width: 160px;
     }
 }
-
+.register-btn-home-txt {
+    width: 160px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
 
 .welcome-div-controll {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
+
 .welcome-div-controll-all {
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 .register-image {
 
@@ -79,7 +87,7 @@
     .register-image {
         height: 80%;
         width: 90%;
-        margin-top: 500px;
+        margin-top: 550px;
     }
     .welcome-image {
         height: 80%;

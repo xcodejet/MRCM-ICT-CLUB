@@ -1,11 +1,12 @@
 //* float header
-let btn_margin = 0
+var btn_margin = 0
 setInterval(() => {
-  if(btn_margin <= 10){
     document.getElementsByClassName('head-btn')[btn_margin].style.marginTop = "0px"
-    btn_margin++}
+    //console.warn(btn_margin)
+    btn_margin = btn_margin + 1
+    if(btn_margin == 6){btn_margin = 0}else{return}
 }, 150)
-/**
+/*
  let img = ["https://wallpaperaccess.com/full/2889825.jpg",
             "https://wallpaperaccess.com/full/2835167.jpg",
             "https://wallpaperaccess.com/full/2889827.jpg",
@@ -17,6 +18,7 @@ setInterval(() => {
             "https://c1.wallpaperflare.com/preview/427/745/192/notebook-natural-laptop-macbook.jpg",
             "https://c1.wallpaperflare.com/preview/260/237/126/59687788344d1-thumbnail.jpg"]
  */
+
 //* bg image changer
 let img =  ["https://wallpaperaccess.com/full/2889825.jpg",
             "https://wallpaperaccess.com/full/2835167.jpg",
@@ -32,20 +34,29 @@ setInterval(() => {
 }, 5000)
 
 // * on scroll fixed header
-window.onscroll = function() {myFunction()}
+window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("header")
-var sticky = header.offsetTop
+var header = document.getElementById("header-fix");
+var sticky = header.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky")
+  header.classList.add("sticky");
+  if (window.pageYOffset > sticky + 600) {
+    //header.classList.add("sticky");
+    header.classList.remove("sticky");
+    document.getElementsByClassName("navigation-scroll")[0].classList.add("sticky");
+    document.getElementsByClassName("navigation-scroll")[0].style.display = "flex"
+  console.warn("hukanoooo...")
   } else {
-    header.classList.remove("sticky")
+    document.getElementsByClassName("navigation-scroll")[0].classList.remove("sticky");
+    document.getElementsByClassName("navigation-scroll")[0].style.display = "none"
   }
 }
+document.getElementsByName('container reveal')[0].focusin(() => {
 
-//* mobile moe option popup
+})
+
+//* mobile more option popup
 
 var more_op_state = false
 function more_op(){
@@ -60,11 +71,7 @@ function more_op(){
   }
 }
 
-function register_animate(){
-  window.open("login.html","_blank")
-  console.warn("pakak")
-}
-/**
+/*
   if(more_op_state === 0){
     document.getElementsByClassName('more-op')[0].style.display = "block"
     document.getElementById('inner-img').style.display = "none"

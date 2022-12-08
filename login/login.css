@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
 .registpage {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
@@ -6,6 +8,9 @@
     width: 100%;
     color: black;
     height: 510px;
+}
+.registpage h1 {
+  font-family: "Asap", sans-serif;
 }
 .register-box {
     border: 1px solid black;
